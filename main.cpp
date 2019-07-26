@@ -21,10 +21,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Include iostream for output during the program.
 #include <iostream>
 using namespace std;
-#include "../header/refTestFunctions.h"
+#include "refTestFunctions.h"
+
+// uses reference for an
+// alternate method to previous tutorial
+void func(int& x)
+{
+	x = 5;
+}
 
 int main()
 {
+	// test1 and func show how to get the
+	// same results as the previous tutorial,
+	// except with a reference instead of a pointer
+	// whichever you want to use is a matter of preference
+	
+	int test1 = 10;
+	func(test1);
+	cout << "test1: " << test1 << endl << endl;
+	
     // ==== Refernces ====
     
     // Now that you know what a pointer is, and how the const keyword works, references are easier to understand.
